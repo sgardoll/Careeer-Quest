@@ -1,10 +1,13 @@
 import '../auth/auth_util.dart';
+import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../main.dart';
 import '../register/register_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginWidget extends StatefulWidget {
@@ -14,7 +17,36 @@ class LoginWidget extends StatefulWidget {
   _LoginWidgetState createState() => _LoginWidgetState();
 }
 
-class _LoginWidgetState extends State<LoginWidget> {
+class _LoginWidgetState extends State<LoginWidget>
+    with TickerProviderStateMixin {
+  final animationsMap = {
+    'imageOnPageLoadAnimation': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 600.ms,
+          begin: 0,
+          end: 1,
+        ),
+        MoveEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 600.ms,
+          begin: Offset(-0.0, 64),
+          end: Offset(0, 0),
+        ),
+        ScaleEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 600.ms,
+          begin: 1,
+          end: 1,
+        ),
+      ],
+    ),
+  };
   TextEditingController? emailTextController;
   TextEditingController? passwordTextController;
 
@@ -25,6 +57,13 @@ class _LoginWidgetState extends State<LoginWidget> {
   @override
   void initState() {
     super.initState();
+    setupAnimations(
+      animationsMap.values.where((anim) =>
+          anim.trigger == AnimationTrigger.onActionTrigger ||
+          !anim.applyInitialState),
+      this,
+    );
+
     emailTextController = TextEditingController();
     passwordTextController = TextEditingController();
     passwordVisibility = false;
@@ -56,13 +95,23 @@ class _LoginWidgetState extends State<LoginWidget> {
                     width: MediaQuery.of(context).size.width,
                     height: 200,
                     decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).primaryColor,
-                      image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: Image.asset(
-                          'assets/images/topSection.png',
-                        ).image,
-                      ),
+                      color: FlutterFlowTheme.of(context).darkBG,
+                      boxShadow: [
+                        BoxShadow(
+                          blurRadius: 4,
+                          color: Color(0x33000000),
+                          offset: Offset(0, 2),
+                        )
+                      ],
+                    ),
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(26, 0, 26, 0),
+                      child: Image.asset(
+                        'assets/images/Logo.png',
+                        width: 250,
+                        fit: BoxFit.contain,
+                      ).animateOnPageLoad(
+                          animationsMap['imageOnPageLoadAnimation']!),
                     ),
                   ),
                 ],

@@ -99,18 +99,38 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
         ),
       ],
     ),
+    'stackOnPageLoadAnimation': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 670.ms,
+          duration: 600.ms,
+          begin: 0,
+          end: 1,
+        ),
+        MoveEffect(
+          curve: Curves.easeInOut,
+          delay: 670.ms,
+          duration: 600.ms,
+          begin: Offset(0, 64),
+          end: Offset(0, 0),
+        ),
+        ScaleEffect(
+          curve: Curves.easeInOut,
+          delay: 670.ms,
+          duration: 600.ms,
+          begin: 1,
+          end: 1,
+        ),
+      ],
+    ),
   };
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    setupAnimations(
-      animationsMap.values.where((anim) =>
-          anim.trigger == AnimationTrigger.onActionTrigger ||
-          !anim.applyInitialState),
-      this,
-    );
   }
 
   @override
@@ -137,21 +157,32 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Expanded(
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'assets/images/logo_HomeScreen@3x.png',
-                      width: 164,
-                      height: 234,
-                      fit: BoxFit.fitHeight,
-                    ).animateOnPageLoad(
-                        animationsMap['imageOnPageLoadAnimation']!),
-                  ],
-                ),
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 200,
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          blurRadius: 4,
+                          color: Color(0x33000000),
+                          offset: Offset(0, 2),
+                        )
+                      ],
+                    ),
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(26, 0, 26, 0),
+                      child: Image.asset(
+                        'assets/images/Logo.png',
+                        width: 250,
+                        fit: BoxFit.contain,
+                      ).animateOnPageLoad(
+                          animationsMap['imageOnPageLoadAnimation']!),
+                    ),
+                  ),
+                ],
               ),
               Expanded(
                 child: Row(
@@ -300,7 +331,8 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                                     ),
                                   ],
                                 ),
-                              ),
+                              ).animateOnPageLoad(
+                                  animationsMap['stackOnPageLoadAnimation']!),
                             ),
                           ],
                         ),

@@ -4,6 +4,7 @@ import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../splash_screen/splash_screen_widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -136,7 +137,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           return Column(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -264,53 +265,76 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                 ),
                               ),
                               Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 0, 0, 26),
-                                      child: FFButtonWidget(
-                                        onPressed: () async {
-                                          final usersUpdateData =
-                                              createUsersRecordData(
-                                            displayName:
-                                                textController1?.text ?? '',
-                                            email: textController2?.text ?? '',
-                                          );
-                                          await columnUsersRecord.reference
-                                              .update(usersUpdateData);
-                                          Navigator.pop(context);
-                                        },
-                                        text: 'Save Changes',
-                                        options: FFButtonOptions(
-                                          width: 230,
-                                          height: 50,
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0, 26, 0, 26),
+                                child: FFButtonWidget(
+                                  onPressed: () async {
+                                    final usersUpdateData =
+                                        createUsersRecordData(
+                                      displayName: textController1?.text ?? '',
+                                      email: textController2?.text ?? '',
+                                    );
+                                    await columnUsersRecord.reference
+                                        .update(usersUpdateData);
+                                    Navigator.pop(context);
+                                  },
+                                  text: 'Save Changes',
+                                  options: FFButtonOptions(
+                                    width: 230,
+                                    height: 50,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .subtitle1
+                                        .override(
+                                          fontFamily: 'Outfit',
                                           color: FlutterFlowTheme.of(context)
-                                              .primaryColor,
-                                          textStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .subtitle1
-                                              .override(
-                                                fontFamily: 'Outfit',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .white,
-                                              ),
-                                          elevation: 3,
-                                          borderSide: BorderSide(
-                                            color: Colors.transparent,
-                                            width: 1,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(8),
+                                              .white,
                                         ),
-                                      ),
+                                    elevation: 3,
+                                    borderSide: BorderSide(
+                                      color: Colors.transparent,
+                                      width: 1,
                                     ),
-                                  ],
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 26),
+                                child: FFButtonWidget(
+                                  onPressed: () async {
+                                    await signOut();
+                                    await Navigator.pushAndRemoveUntil(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            SplashScreenWidget(),
+                                      ),
+                                      (r) => false,
+                                    );
+                                  },
+                                  text: 'Logout',
+                                  options: FFButtonOptions(
+                                    width: 230,
+                                    height: 50,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .subtitle1
+                                        .override(
+                                          fontFamily: 'Outfit',
+                                          color: FlutterFlowTheme.of(context)
+                                              .white,
+                                        ),
+                                    elevation: 3,
+                                    borderSide: BorderSide(
+                                      color: Colors.transparent,
+                                      width: 1,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
                                 ),
                               ),
                             ],

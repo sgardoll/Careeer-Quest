@@ -62,12 +62,22 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                   width: MediaQuery.of(context).size.width,
                   height: 200,
                   decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).primaryColor,
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: Image.asset(
-                        'assets/images/topSection.png',
-                      ).image,
+                    color: FlutterFlowTheme.of(context).darkBG,
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 4,
+                        color: Color(0x33000000),
+                        offset: Offset(0, 2),
+                      )
+                    ],
+                  ),
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(26, 0, 26, 0),
+                    child: Image.asset(
+                      'assets/images/Logo.png',
+                      width: 250,
+                      height: 100,
+                      fit: BoxFit.contain,
                     ),
                   ),
                 ),

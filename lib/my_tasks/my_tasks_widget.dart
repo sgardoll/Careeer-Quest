@@ -103,7 +103,7 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
         backgroundColor: FlutterFlowTheme.of(context).primaryColor,
         automaticallyImplyLeading: false,
         title: Text(
-          'My Tasks',
+          'My Passions',
           style: FlutterFlowTheme.of(context).title1.override(
                 fontFamily: 'Outfit',
                 color: FlutterFlowTheme.of(context).white,
@@ -144,12 +144,12 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
               children: [
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 53,
+                  height: 100,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      fit: BoxFit.fitWidth,
+                      fit: BoxFit.cover,
                       image: Image.asset(
-                        'assets/images/waves@2x.png',
+                        'assets/images/Header.png',
                       ).image,
                     ),
                   ),
@@ -162,7 +162,7 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Text(
-                    'Scheduled Tasks',
+                    'Found Passions',
                     style: FlutterFlowTheme.of(context).subtitle2,
                   ),
                 ],

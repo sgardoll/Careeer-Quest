@@ -101,7 +101,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
         backgroundColor: FlutterFlowTheme.of(context).primaryColor,
         automaticallyImplyLeading: false,
         title: Text(
-          'Completed Tasks',
+          'Archived Passions',
           style: FlutterFlowTheme.of(context).title1.override(
                 fontFamily: 'Outfit',
                 color: FlutterFlowTheme.of(context).white,
@@ -119,9 +119,9 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
               mainAxisSize: MainAxisSize.max,
               children: [
                 Image.asset(
-                  'assets/images/waves@2x.png',
+                  'assets/images/Header.png',
                   width: MediaQuery.of(context).size.width,
-                  height: 56,
+                  height: 100,
                   fit: BoxFit.cover,
                 ),
               ],
