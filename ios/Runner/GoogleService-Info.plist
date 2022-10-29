@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>777984684485-b07tt1vu8bsp58vq203eb63quf7e556k.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.777984684485-b07tt1vu8bsp58vq203eb63quf7e556k</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>777984684485-11uq6rc244f90h1hmme2svkugg1cthg7.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBF61_0l6gntNCldJC35tQEaOM4yQ2jWbg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>777984684485</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.connectio.passion</string>
+	<key>PROJECT_ID</key>
+	<string>find-your-passion-c181f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>find-your-passion-c181f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:777984684485:ios:3786ce8deb22f5e0ec1bac</string>
+</dict>
+</plist>

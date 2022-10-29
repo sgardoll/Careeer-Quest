@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "777984684485",
+    "project_id": "find-your-passion-c181f",
+    "storage_bucket": "find-your-passion-c181f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777984684485:android:6063c576573fa59fec1bac",
+        "android_client_info": {
+          "package_name": "FindYour.Passion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777984684485-11uq6rc244f90h1hmme2svkugg1cthg7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "FindYour.Passion",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "777984684485-2u7vqmd600626efomibtfj9qt5d31usd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRhoHkNhTLWKjvPCB0e3A9lQ7cpj_RqM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777984684485-2u7vqmd600626efomibtfj9qt5d31usd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "777984684485-b07tt1vu8bsp58vq203eb63quf7e556k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.connectio.passion"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777984684485:android:bed6470b50ac3c8aec1bac",
+        "android_client_info": {
+          "package_name": "com.connectio.passion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777984684485-6a1no9dlpqv1bo6cc0hnmj855k4a37l0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.connectio.passion",
+            "certificate_hash": "e49e22fc6b7516e43402738ae571713e30c464d8"
+          }
+        },
+        {
+          "client_id": "777984684485-nk7jrrcokflj8o7ppogdigg6dodhuovg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.connectio.passion",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "777984684485-2u7vqmd600626efomibtfj9qt5d31usd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRhoHkNhTLWKjvPCB0e3A9lQ7cpj_RqM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777984684485-2u7vqmd600626efomibtfj9qt5d31usd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "777984684485-b07tt1vu8bsp58vq203eb63quf7e556k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.connectio.passion"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
