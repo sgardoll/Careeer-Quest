@@ -158,11 +158,11 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.alarm_on,
+              Icons.archive_outlined,
               size: 32,
             ),
             activeIcon: Icon(
-              Icons.alarm_on,
+              Icons.archive_rounded,
               size: 32,
             ),
             label: '--',
