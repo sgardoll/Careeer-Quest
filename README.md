@@ -1,31 +1,13 @@
-# Find Your Passion
+# Career Quest
 
-A new Flutter project.
+Introducing Career Quest - the app that combines all the excitement of an adventure game together with the smarts of that career advisor you should have listen to more in high school. With Career Quest, you can you can turn your life from a side quest into the main game.
 
-## Getting Started
+* Embark on a journey to discover the secret behind your passions and connect them with the latest research from global experts;
+* Unlock your individual "passion profile" to help guide your personal and professional growth;
+* Solve fun, challenging puzzles to answer questions about your personality and interests;
+* Explore new levels and unlock hidden treasures as you learn from the latest career development theories from around the world;
+* Take control of your destiny and start your journey towards personal development, growth, and happiness today with Career Quest.
 
-FlutterFlow projects are built to run on the Flutter _stable_ release.
+Don't waste another moment on a job you hate. With Career Quest, you can discover your ideal career path and start living the life you've always dreamed of. 
 
-### IMPORTANT:
-
-For projects with Firestore integration, you must first run the following commands to ensure the project compiles:
-
-```
-flutter pub get
-flutter packages pub run build_runner build --delete-conflicting-outputs
-```
-
-This command creates the generated files that parse each Record from Firestore into a schema object.
-
-### Getting started continued:
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Join the private beta now and embark on your epic adventure towards your dream job. 
